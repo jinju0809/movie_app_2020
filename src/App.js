@@ -33,14 +33,17 @@ const foodILike =[
   }
 ]
 
+
+function renderFood(dish){
+  return <Food name={dish.name} picture={dish.image}/>
+  //map은 언제나 array를 돌려줌
+}
+
 function App() {
   return (
     <div>
       <h1>Hello!!!!!</h1>
-      foodILike
-       {foodILike.map(dish =>(
-          <Food name={dish.name} picture={dish.image}/>
-        ))}
+       {foodILike.map(renderFood)}
     </div>
   );
 }
